@@ -32,7 +32,7 @@ async def stream_ticker_quote():
         # Add events to the batch.
         event_data_batch.add(EventData(get_ticker_quote(ticker = 'tsla')))
         event_data_batch.add(EventData(get_ticker_quote(ticker = 'shop')))
-        event_data_batch.add(EventData(get_ticker_quote(ticker = 'msft')))
+        event_data_batch.add(EventData(get_ticker_quote(ticker = 'googl')))
  
         # Send the batch of events to the event hub.
         await producer.send_batch(event_data_batch)
