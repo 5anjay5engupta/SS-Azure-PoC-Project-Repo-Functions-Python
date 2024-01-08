@@ -1,6 +1,6 @@
 #********************************************************************************#
 #       Author : Sanjay Sengupta - Enterprise Cloud & Big Data Analytics Architect
-# Last Updated : Nov 9, 2022
+# Last Updated : Jan 8, 2024
 #********************************************************************************#
 
 from yahoo_fin import stock_info as si
@@ -18,7 +18,7 @@ def get_ticker_quote(ticker):
 # get_ticker_quote(ticker)
 
 ### ticker quote event producer function ###
-connection_str = 'Endpoint=sb://idev-event-hubs-namespace.servicebus.windows.net/;SharedAccessKeyName=iDEV-Event-Hub-Authorization-Rule;SharedAccessKey=RMtlAtNrCYTy+8/TGuF8ZPrdQXGcIgodpgJEti/W+cU=;EntityPath=idev-event-hub'
+connection_str = 'Endpoint=sb://idev-event-hubs-namespace.servicebus.windows.net/;SharedAccessKeyName=iDEV-Event-Hub-Authorization-Rule;SharedAccessKey=zv2U3JveHkej2d+9oTbBY2HYYjXkuHUku+AEhFBa6YM=;EntityPath=idev-event-hub'
 event_hub_path = 'idev-event-hub'
 async def stream_ticker_quote():
     # Create a producer client to send messages to the event hub.
@@ -37,6 +37,6 @@ async def stream_ticker_quote():
         # Send the batch of events to the event hub.
         await producer.send_batch(event_data_batch)
 
-### ticker quote streaming code ###
+### ticker quote streaming event producer code ###
 while True:
     asyncio.run(stream_ticker_quote())
