@@ -124,7 +124,7 @@ def format_table(column_names, rows):
 
 # Usage Example
 if __name__ == "__main__":
-    db_path = "C:\GitHub\Virtusa-PoC\example.db"
+    db_path = "C:\GitHub\SS-Azure-PoC-Project-Repo-Functions-Python\example.db"
     table_name = "employees"
 
     # Ask user for the number of records to generate
