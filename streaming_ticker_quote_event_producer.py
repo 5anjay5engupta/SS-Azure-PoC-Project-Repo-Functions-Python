@@ -1,6 +1,6 @@
 #********************************************************************************#
 #       Author : Sanjay Sengupta - Enterprise Cloud & Big Data Analytics Architect
-# Last Updated : Jan 8, 2024
+# Last Updated : Jan 24, 2025
 #********************************************************************************#
 
 from yahoo_fin import stock_info as si
